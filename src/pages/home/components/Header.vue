@@ -17,16 +17,19 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import '~styles/varibles.styl'
   header
     display: flex
     height: .88rem
     align-items: center
-    background: #00bcd4
+    background: $bgColor
     color: #fff
     span
       padding: 0 .1rem
     .header-left
-      width: .6rem
+      width: .7rem
+      padding-left: .1rem
+      font-weight: 700
     .header-mid
       flex: 1
       height: .6rem
@@ -36,5 +39,6 @@ export default {
       background: #fff
       color: #e4e7ea
     .header-right
-      padding: 0 .22rem
+      padding-right: .1rem
+      padding-left: .2rem
 </style>
