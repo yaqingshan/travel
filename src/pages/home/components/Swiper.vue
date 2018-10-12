@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <swiper :options="swiperOption">
     <!-- slides -->
     <swiper-slide>I'm Slide 1</swiper-slide>
@@ -14,16 +15,25 @@
     <div class="swiper-button-next" slot="button-next"></div>
     <div class="swiper-scrollbar"   slot="scrollbar"></div>
   </swiper>
+=======
+  <div>
+  swiper
+  </div>
+>>>>>>> 05473a765a9db1b6d3e2d48c95d3cb854f005983
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
   name: 'HomeSwiper',
   data () {
     return {
       swiperOption: {}
     }
   }
+=======
+  name: 'HomeHeader'
+>>>>>>> 05473a765a9db1b6d3e2d48c95d3cb854f005983
 }
 </script>
 
