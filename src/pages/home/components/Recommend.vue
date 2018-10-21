@@ -19,15 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recList: [{id: 1, title: '北京野生动物园', src: 'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg', price: 70.1
-      }, {id: 2, title: '故宫', src: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg', price: 20
-      }, {id: 3, title: '北京欢乐谷', src: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg', price: 39.9
-      }, {id: 4, title: '古北水镇', src: 'http://img1.qunarzz.com/sight/p0/1712/c2/c2d6eb9c771a3df3a3.img.jpg_200x200_3585386c.jpg', price: 150
-      }, {id: 5, title: '什刹海', src: 'http://img1.qunarzz.com/sight/p0/1603/85/85c883189bf7293390.water.jpg_200x200_3165123d.jpg', price: 9.9
-      }]
-    }
+  props: {
+    recList: Array
   }
 }
 </script>

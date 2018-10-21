@@ -1,0 +1,117 @@
+{
+    "code" : 200,
+    "data" : {
+        "city" : "北京",
+        "iconList": [{
+            "id": 1,
+            "title": "景点门票",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png"
+          }, {
+            "id": 2,
+            "title": "北京必游",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png"
+          }, {
+            "id": 3,
+            "title": "一日游",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png"
+          }, {
+            "id": 4,
+            "title": "文化古迹",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png"
+          }, {
+            "id": 5,
+            "title": "动植物园",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png"
+          }, {
+            "id": 6,
+            "title": "故宫",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png"
+          }, {
+            "id": 7,
+            "title": "野生动物园",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png"
+          }, {
+            "id": 8,
+            "title": "泡温泉",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png"
+          }, {
+            "id": 9,
+            "title": "打卡圣地",
+            "imgUrl": "https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png"
+          }, {
+            "id": 10,
+            "title": "全部玩乐",
+            "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png"
+        }],
+        "swiperList": [{
+            "id": 1,
+            "url": "http://img1.qunarzz.com/piao/fusion/1809/31/da037478f37cf202.jpg_750x200_a02cf862.jpg"
+          },{
+            "id": 2,
+            "url": "http://img1.qunarzz.com/piao/fusion/1809/ff/1bf7d3a4f6591002.jpg_750x200_40809f2a.jpg"
+        },{
+            "id": 3,
+            "url": "http://img1.qunarzz.com/piao/fusion/1809/8a/ef38d29f2791f02.jpg_750x200_c2defee1.jpg"
+        },{
+            "id": 4,
+            "url": "http://img1.qunarzz.com/piao/fusion/1801/bd/04554e7c67650302.jpg_750x200_4293d60a.jpg"
+        },{
+            "id": 5,
+            "url": "http://img1.qunarzz.com/piao/fusion/1809/86/deb33800de224c02.jpg_750x200_74fb795e.jpg"
+        },{
+            "id": 6,
+            "url": "http://img1.qunarzz.com/piao/fusion/1806/1c/4847ea66072c7b02.jpg_750x200_c32457fb.jpg"
+        }],
+        "recList": [{
+            "id": 1, 
+            "title": "北京野生动物园", 
+            "src": "http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg", 
+            "price": 70.1
+          }, {
+            "id": 2, 
+            "title": "故宫", 
+            "src": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg", 
+            "price": 20
+          }, {
+            "id": 3, 
+            "title": "北京欢乐谷", 
+            "src": "http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg", 
+            "price": 39.9
+          }, {
+            "id": 4, 
+            "title": "古北水镇", 
+            "src": "http://img1.qunarzz.com/sight/p0/1712/c2/c2d6eb9c771a3df3a3.img.jpg_200x200_3585386c.jpg", 
+            "price": 150
+          }, {
+            "id": 5, 
+            "title": "什刹海", 
+            "src": "http://img1.qunarzz.com/sight/p0/1603/85/85c883189bf7293390.water.jpg_200x200_3165123d.jpg", 
+            "price": 9.9
+        }],
+        "weekList": [{"id": 1, 
+            "title": "北京野生动物园", 
+            "src": "http://img1.qunarzz.com/sight/source/1509/81/0412da9c4db66a.jpg_r_640x214_8e23871e.jpg", 
+            "subtitle": "山顶满眼彩色，此情此景醉了"
+          }, {
+            "id": 2, 
+            "title": "北京必游TOP10", 
+            "src": "http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg", 
+            "subtitle": "来北京必去的景点非这些地方莫属"
+          }, {
+            "id": 3, 
+            "title": "寻找北京的皇城范儿", 
+            "src": "http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg", 
+            "subtitle": "数百年的宫廷庙宇，至今依旧威严霸气"
+          }, {
+            "id": 4, 
+            "title": "学生最爱的博物馆", 
+            "src": "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg", 
+            "subtitle": "周末干嘛？北京很多博物馆已经免费开放啦"
+          }, {
+            "id": 5, 
+            "title": "儿童剧场，孩子的乐园", 
+            "src": "http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg", 
+            "subtitle": "带宝贝观看演出，近距离体验艺术的无穷魅力"
+        }]
+    }
+}

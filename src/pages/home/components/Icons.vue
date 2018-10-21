@@ -19,52 +19,14 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconList: Array
+  },
   data () {
     return {
       swiperOption: {
 
-      },
-      iconList: [{
-        id: 1,
-        title: '景点门票',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-      }, {
-        id: 2,
-        title: '北京必游',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png'
-      }, {
-        id: 3,
-        title: '一日游',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png'
-      }, {
-        id: 4,
-        title: '文化古迹',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png'
-      }, {
-        id: 5,
-        title: '动植物园',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png'
-      }, {
-        id: 6,
-        title: '故宫',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png'
-      }, {
-        id: 7,
-        title: '野生动物园',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png'
-      }, {
-        id: 8,
-        title: '泡温泉',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png'
-      }, {
-        id: 9,
-        title: '打卡圣地',
-        imgUrl: 'https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png'
-      }, {
-        id: 10,
-        title: '全部玩乐',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png'
-      }]
+      }
     }
   },
   computed: {
