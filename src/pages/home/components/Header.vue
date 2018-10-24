@@ -5,7 +5,9 @@
       <span class="iconfont">&#xe624;</span>
     </div>
     <div class="header-mid"><span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
-    <div class="header-right">{{city}}<span class="iconfont">&#xe6aa;</span></div>
+    <router-link to="/city">
+      <div class="header-right">{{city}}<span class="iconfont">&#xe6aa;</span></div>
+    </router-link>
   </header>
   </div>
 </template>
@@ -23,7 +25,7 @@ export default {
   @import '~styles/varibles.styl'
   header
     display: flex
-    height: .88rem
+    height: $height
     align-items: center
     background: $bgColor
     color: #fff
