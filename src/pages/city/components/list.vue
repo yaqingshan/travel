@@ -11,35 +11,15 @@
       <div class="area hot-container">
         <div class="title">热门城市</div>
         <ul class="border-topbottom hot-list">
-          <li class="border">北京</li>
-          <li class="border">上海</li>
-          <li class="border">成都</li>
+          <li class="border" v-for="item of hotCities" :key="item.id">{{item.name}}</li>
         </ul>
       </div>
       <!-- 搜索城市列表 -->
       <div class="area">
-        <div class="list-item">
-          <div class="title">A</div>
+        <div class="list-item" v-for="(item, key) of cities" :key="key">
+          <div class="title">{{key}}</div>
           <ul>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-          </ul>
-        </div>
-        <div class="list-item">
-          <div class="title">A</div>
-          <ul>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-          </ul>
-        </div>
-        <div class="list-item">
-          <div class="title">A</div>
-          <ul>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
-            <li class="border-bottom">阿坝藏族羌族自治州</li>
+            <li class="border-bottom" v-for="city of item" :key="city.id">{{city.name}}</li>
           </ul>
         </div>
       </div>
@@ -51,6 +31,10 @@
 import BScroll from 'better-scroll'
 export default {
   name: 'cityList',
+  props: {
+    cities: Object,
+    hotCities: Array
+  },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
   }
