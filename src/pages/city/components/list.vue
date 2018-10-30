@@ -16,7 +16,7 @@
       </div>
       <!-- 搜索城市列表 -->
       <div class="area">
-        <div class="list-item" v-for="(item, key) of cities" :key="key">
+        <div class="list-item" v-for="(item, key) of cities" :key="key" :ref="key">
           <div class="title">{{key}}</div>
           <ul>
             <li class="border-bottom" v-for="city of item" :key="city.id">{{city.name}}</li>
@@ -33,10 +33,23 @@ export default {
   name: 'cityList',
   props: {
     cities: Object,
-    hotCities: Array
+    hotCities: Array,
+    letter: String
   },
   mounted () {
+    // $refs.ele 获取dom元素 ref="ele"
     this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        const elem = this.$refs[this.letter][0]
+        // console.log(this.letter)
+        // console.log(elem)
+        // BScroll中的方法
+        this.scroll.scrollToElement(elem)
+      }
+    }
   }
 }
 </script>
