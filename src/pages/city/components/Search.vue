@@ -1,12 +1,62 @@
 <template>
-  <div class="search">
-    <input type="text" placeholder="输入城市名或拼音" value="" />
+  <div>
+    <div class="search">
+      <input type="text" v-model="keyval" placeholder="输入城市名或拼音" value="" />
+    </div>
+    <div class="search-result-list" ref="search" v-show="keyval">
+      <ul>
+        <li class="border-bottom" v-for="item of resultList" :key="item.id">{{item.name}}</li>
+        <li v-show="hasNoData">没有搜寻到匹配结果</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
-  name: 'citySearch'
+  name: 'citySearch',
+  props: {
+    cities: Object
+  },
+  data () {
+    return {
+      keyval: '',
+      resultList: [],
+      timer: null
+    }
+  },
+  watch: {
+    keyval () {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      // 判断keyval是否为空
+      if (!this.keyval) {
+        this.resultList = []
+        return
+      }
+      this.timer = setTimeout(() => {
+        const result = []
+        for (let i in this.cities) {
+          this.cities[i].forEach((item) => {
+            if (item.name.indexOf(this.keyval) > -1 || item.spell.indexOf(this.keyval) > -1) {
+              result.push(item)
+            }
+          })
+        }
+        this.resultList = result
+      }, 100)
+    }
+  },
+  mounted () {
+    this.scroll = new BScroll(this.$refs.search)
+  },
+  computed: {
+    hasNoData () {
+      return !this.resultList.length
+    }
+  }
 }
 </script>
 
@@ -25,4 +75,18 @@ export default {
       font-size: .28rem
       text-align: center
       border-radius: .1rem
+  .search-result-list
+    overflow: hidden
+    position: absolute
+    left: 0
+    right: 0
+    top: 2rem
+    bottom: 0
+    z-index: 44
+    background: #fff
+    li
+      padding: .22rem
+      font-size: .28rem
+      color: $textColor
+
 </style>
