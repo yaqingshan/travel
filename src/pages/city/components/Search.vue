@@ -5,7 +5,9 @@
     </div>
     <div class="search-result-list" ref="search" v-show="keyval">
       <ul>
-        <li class="border-bottom" v-for="item of resultList" :key="item.id">{{item.name}}</li>
+        <li class="border-bottom"
+            v-for="item of resultList"
+            :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
         <li v-show="hasNoData">没有搜寻到匹配结果</li>
       </ul>
     </div>
@@ -24,6 +26,13 @@ export default {
       keyval: '',
       resultList: [],
       timer: null
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+    // 派发事件给actions接收
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
     }
   },
   watch: {
@@ -50,7 +59,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.search)
+    this.scroll = new BScroll(this.$refs.search, { click: true, tap: true })
   },
   computed: {
     hasNoData () {

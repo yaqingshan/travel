@@ -5,13 +5,15 @@
       <div class="area hot-container">
         <div class="title">当前城市</div>
         <ul class="border-topbottom hot-list">
-          <li class="border">北京</li>
+          <li class="border">{{this.$store.state.city}}</li>
         </ul>
       </div>
       <div class="area hot-container">
         <div class="title">热门城市</div>
         <ul class="border-topbottom hot-list">
-          <li class="border" v-for="item of hotCities" :key="item.id">{{item.name}}</li>
+          <li class="border"
+            v-for="item of hotCities"
+            :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
         </ul>
       </div>
       <!-- 搜索城市列表 -->
@@ -19,7 +21,9 @@
         <div class="list-item" v-for="(item, key) of cities" :key="key" :ref="key">
           <div class="title">{{key}}</div>
           <ul>
-            <li class="border-bottom" v-for="city of item" :key="city.id">{{city.name}}</li>
+            <li class="border-bottom"
+                v-for="city of item"
+                :key="city.id" @click="handleCityClick(city.name)">{{city.name}}</li>
           </ul>
         </div>
       </div>
@@ -36,9 +40,17 @@ export default {
     hotCities: Array,
     letter: String
   },
+  methods: {
+    handleCityClick (city) {
+    // console.log(city)
+    // 派发事件给actions接收 可以不用dispatch 经过actions 可以直接通过commit实现
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
+    }
+  },
   mounted () {
-    // $refs.ele 获取dom元素 ref="ele"
-    this.scroll = new BScroll(this.$refs.wrapper)
+    // $refs.ele 获取dom元素 ref="ele" 设置属性，解决绑定click事件失效
+    this.scroll = new BScroll(this.$refs.wrapper, { click: true, tap: true })
   },
   watch: {
     letter () {
