@@ -6,15 +6,20 @@
     </div>
     <div class="header-mid"><span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
     <router-link to="/city">
-      <div class="header-right">{{this.$store.state.city}}<span class="iconfont">&#xe6aa;</span></div>
+      <div class="header-right">{{this.city}}<span class="iconfont">&#xe6aa;</span></div>
     </router-link>
   </header>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city']) // 从state中映射一个叫city的给计算属性中的city
+    // ...mapGetters(['doubleCity']) // 使用getters
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
       <div class="area hot-container">
         <div class="title">当前城市</div>
         <ul class="border-topbottom hot-list">
-          <li class="border">{{this.$store.state.city}}</li>
+          <li class="border">{{this.currentCity}}</li>
         </ul>
       </div>
       <div class="area hot-container">
@@ -33,8 +33,14 @@
 
 <script>
 import BScroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'cityList',
+  computed: { // 不只可以传数组，也可以传对象进去
+    ...mapState({
+      currentCity: 'city' // 映射过来的值必须加引号
+    })
+  },
   props: {
     cities: Object,
     hotCities: Array,
@@ -44,9 +50,11 @@ export default {
     handleCityClick (city) {
     // console.log(city)
     // 派发事件给actions接收 可以不用dispatch 经过actions 可以直接通过commit实现
-      this.$store.commit('changeCity', city)
+    //  this.$store.commit('changeCity', city)
+      this.changeCity(city)
       this.$router.push('/')
-    }
+    },
+    ...mapMutations(['changeCity'])
   },
   mounted () {
     // $refs.ele 获取dom元素 ref="ele" 设置属性，解决绑定click事件失效
