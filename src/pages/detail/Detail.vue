@@ -1,11 +1,18 @@
 <template>
-  <div class="detail_container">详情页</div>
+  <div class="detail_container">
+  详情页
+    <detail-banner></detail-banner>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Detail'
+import detailBanner from './components/Banner.vue'
+export default {
+  name: 'Detail',
+  components: {
+    detailBanner
   }
+}
 </script>
 
 <style lang="stylus" scoped>

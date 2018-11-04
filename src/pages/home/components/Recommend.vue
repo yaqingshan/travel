@@ -2,16 +2,17 @@
   <div class="recommend">
     <div class="title">热门推荐</div>
     <ul>
-      <li class="list-item border-bottom" v-for="item of recList" :key="item.id">
+      <!-- 用tag表示渲染的目标元素,而不是渲染出a标签 -->
+      <router-link tag="li" :to="'/detail/' + item.id" class="list-item border-bottom" v-for="item of recList" :key="item.id">
         <div class="item-img">
           <img :src="item.src">
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-price"><span>￥{{item.price}}</span>起</p>
-          <a href="javascript" class="look-detail">查看详情</a>
+          <div class="look-detail">查看详情</div>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
