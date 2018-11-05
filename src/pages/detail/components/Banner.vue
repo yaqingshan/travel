@@ -8,7 +8,7 @@
           峨眉山(AAAAA景区)
         </div>
         <div class="img-num">
-          <span class="iconfont">&#xe632;</span>23
+          <span class="iconfont">&#xe658;</span>23
         </div>
       </div>
       <common-gallery :list="list" v-show="showGallery" @close="handleHideGlallery"></common-gallery>
@@ -80,4 +80,7 @@ export default {
       bottom: .86rem
       z-index: 11
       background: rgba(0,0,0,0.5)
+      .iconfont
+        font-size: .16rem
+        padding-right: .1rem
 </style>
