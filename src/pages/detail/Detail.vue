@@ -1,6 +1,5 @@
 <template>
   <div class="detail_container">
-  详情页
     <detail-banner></detail-banner>
   </div>
 </template>
