@@ -18,7 +18,7 @@
 <script type="text/javascript">
 import CommonGallery from 'common/gallery/Gallery.vue'
 export default {
-  name: 'detailBanner',
+  name: 'DetailBanner',
   data () {
     return {
       list: [{

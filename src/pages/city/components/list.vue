@@ -35,7 +35,7 @@
 import BScroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
 export default {
-  name: 'cityList',
+  name: 'CityList',
   computed: { // 不只可以传数组，也可以传对象进去
     ...mapState({
       currentCity: 'city' // 映射过来的值必须加引号

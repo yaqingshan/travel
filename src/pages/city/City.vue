@@ -8,18 +8,18 @@
 </template>
 
 <script>
-import cityHeader from './components/Header.vue'
-import citySearch from './components/Search.vue'
-import cityList from './components/List.vue'
-import cityAlphabet from './components/Alphabet.vue'
+import CityHeader from './components/Header.vue'
+import CitySearch from './components/Search.vue'
+import CityList from './components/List.vue'
+import CityAlphabet from './components/Alphabet.vue'
 import axios from 'axios'
 export default {
   name: 'City',
   components: {
-    cityHeader,
-    citySearch,
-    cityList,
-    cityAlphabet
+    CityHeader,
+    CitySearch,
+    CityList,
+    CityAlphabet
   },
   data () {
     return {

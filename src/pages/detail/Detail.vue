@@ -1,15 +1,18 @@
 <template>
   <div class="detail_container">
     <detail-banner></detail-banner>
+    <detail-header></detail-header>
   </div>
 </template>
 
 <script>
-import detailBanner from './components/Banner.vue'
+import DetailBanner from './components/Banner.vue'
+import DetailHeader from './components/Header.vue'
 export default {
   name: 'Detail',
   components: {
-    detailBanner
+    DetailBanner,
+    DetailHeader
   }
 }
 </script>
