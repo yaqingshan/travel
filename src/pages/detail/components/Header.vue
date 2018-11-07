@@ -9,7 +9,6 @@
       </router-link>
     故宫
     </div>
-    <div class="height"></div>
   </div>
 </template>
 
@@ -50,9 +49,6 @@ export default {
 
 <style lang="stylus" scoped>
  @import '~styles/varibles.styl'
-  .height
-    width: 100%
-    height: 20rem
   .back
     width: .72rem
     height: .72rem
