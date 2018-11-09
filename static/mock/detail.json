@@ -1,0 +1,31 @@
+{
+  "code" : 200,
+  "data": {
+    "sightName": "峨眉山(AAAAA景区)",
+    "bannerImg": "http://img1.qunarzz.com/sight/p0/1712/16/16dd785ae3e2447ba3.img.jpg_r_800x800_dd060a69.jpg",
+    "gallaryImgs": [
+      "http://img1.qunarzz.com/sight/p0/1712/16/16dd785ae3e2447ba3.img.jpg_r_800x800_dd060a69.jpg",
+      "http://img1.qunarzz.com/sight/p0/1712/2f/2fde369d83e19a8ba3.img.jpg_r_800x800_f300c3cd.jpg",
+      "http://img1.qunarzz.com/sight/p0/1712/9f/9f6f05011cf5bc17a3.img.jpg_r_800x800_3bf703de.jpg",
+      "http://img1.qunarzz.com/sight/p0/201309/23/0cf02d85cb427428c8d65eac.jpg_r_800x800_acef1ca5.jpg",
+      "http://img1.qunarzz.com/sight/p0/201305/24/6d08b313bbafcf1ac8d65eac.jpg_r_800x800_30cef4ae.jpg"
+    ],
+    "categoryList": [{
+        "title": "门票",
+        "children": [{
+          "title": "峨眉山成人票",
+          "children": [{
+            "title": "实名制购票刷身份证直接入园"
+          }]
+        },{
+          "title": "峨眉山优惠人群票"
+        }]
+      }, {
+        "title": "景区交通"
+      }, {
+        "title": "手机智能讲解（不含大门票）"
+      }, {
+        "title": "周边景区"
+      }]
+  }
+}
