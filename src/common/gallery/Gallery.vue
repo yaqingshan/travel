@@ -30,8 +30,8 @@ export default {
         pagination: '.swiper-pagination',
         paginationType: 'fraction',
         observer: true, // 监听dom结构发生变化时，自我刷新一次
-        observeParents: true, // 与上一个属性一起使用，因为一开始隐藏，显示时dom反生了改变
-        loop: true
+        observeParents: true // 与上一个属性一起使用，因为一开始隐藏，显示时dom反生了改变
+        // loop: true
       }
     }
   },
@@ -58,7 +58,7 @@ export default {
     bottom: 0
     top: 0
     background: #000
-    z-index: 22
+    z-index: 99
     .wrapper
       width: 100%
       height: 0

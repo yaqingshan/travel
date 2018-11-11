@@ -1,6 +1,6 @@
 <template>
   <div class="detail_container">
-    <detail-banner></detail-banner>
+    <detail-banner :bannerImg="bannerImg" :sightName="sightName" :gallaryImgs="gallaryImgs"></detail-banner>
     <detail-header></detail-header>
     <detail-list :list="list"></detail-list>
   </div>
@@ -10,6 +10,7 @@
 import DetailBanner from './components/Banner.vue'
 import DetailHeader from './components/Header.vue'
 import DetailList from './components/List.vue'
+import axios from 'axios'
 export default {
   name: 'Detail',
   components: {
@@ -19,28 +20,31 @@ export default {
   },
   data () {
     return {
-      list: [{
-        id: 1000,
-        title: '一级标题1',
-        children: [{
-          id: 10001,
-          title: '二级标题1',
-          children: [{
-            id: 100011,
-            title: '三级标题1'
-          }, {
-            id: 100012,
-            title: '三级标题2'
-          }]
-        }, {
-          id: 10002,
-          title: '二级标题2'
-        }]
-      }, {
-        id: 2000,
-        title: '一级标题2'
-      }]
+      bannerImg: '',
+      sightName: '',
+      gallaryImgs: [],
+      list: []
     }
+  },
+  methods: {
+    getDetailData () {
+      axios.get('api/detail.json').then(
+        this.getDetaiSucess
+      )
+    },
+    getDetaiSucess (res) {
+      res = res.data
+      if (res.code === 200) {
+        const data = res.data
+        this.bannerImg = data.bannerImg
+        this.sightName = data.sightName
+        this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
+      }
+    }
+  },
+  mounted () {
+    this.getDetailData()
   }
 }
 </script>

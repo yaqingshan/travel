@@ -2,16 +2,16 @@
     <div>
       <div class="detail-banner" @click="handleShowGlallery">
         <div class="banner">
-          <img src="http://img1.qunarzz.com/sight/p0/1712/16/16dd785ae3e2447ba3.img.jpg_600x330_38a5c69c.jpg" />
+          <img :src="bannerImg" />
         </div>
         <div class="title">
-          峨眉山(AAAAA景区)
+          {{sightName}}
         </div>
         <div class="img-num">
-          <span class="iconfont">&#xe658;</span>23
+          <span class="iconfont">&#xe658;</span>{{gallaryImgs.length}}
         </div>
       </div>
-      <common-gallery :list="list" v-show="showGallery" @close="handleHideGlallery"></common-gallery>
+      <common-gallery :list="gallaryImgs" v-show="showGallery" @close="handleHideGlallery"></common-gallery>
     </div>
 </template>
 
@@ -19,15 +19,13 @@
 import CommonGallery from 'common/gallery/Gallery.vue'
 export default {
   name: 'DetailBanner',
+  props: {
+    bannerImg: String,
+    sightName: String,
+    gallaryImgs: Array
+  },
   data () {
     return {
-      list: [{
-        id: 1,
-        url: 'http://img1.qunarzz.com/sight/p0/1712/16/16dd785ae3e2447ba3.img.jpg_r_800x800_dd060a69.jpg'
-      }, {
-        id: 2,
-        url: 'http://img1.qunarzz.com/sight/p0/1712/2f/2fde369d83e19a8ba3.img.jpg_r_800x800_f300c3cd.jpg'
-      }],
       showGallery: false
     }
   },
