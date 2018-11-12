@@ -11,12 +11,15 @@
           <span class="iconfont">&#xe658;</span>{{gallaryImgs.length}}
         </div>
       </div>
-      <common-gallery :list="gallaryImgs" v-show="showGallery" @close="handleHideGlallery"></common-gallery>
+      <fade-animate>
+        <common-gallery :list="gallaryImgs" v-show="showGallery" @close="handleHideGlallery"></common-gallery>
+      </fade-animate>
     </div>
 </template>
 
 <script type="text/javascript">
 import CommonGallery from 'common/gallery/Gallery.vue'
+import FadeAnimate from 'common/fade/FadeAnimate.vue'
 export default {
   name: 'DetailBanner',
   props: {
@@ -30,7 +33,8 @@ export default {
     }
   },
   components: {
-    CommonGallery
+    CommonGallery,
+    FadeAnimate
   },
   methods: {
     handleShowGlallery () {

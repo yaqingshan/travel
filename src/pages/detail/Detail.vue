@@ -28,11 +28,16 @@ export default {
   },
   methods: {
     getDetailData () {
-      axios.get('api/detail.json').then(
-        this.getDetaiSucess
+      // this.$route.params.id 获取链接上的参数id
+      axios.get('api/detail.json', {
+        params: {
+          id: this.$route.params.id
+        }
+      }).then(
+        this.getDetailSucess
       )
     },
-    getDetaiSucess (res) {
+    getDetailSucess (res) {
       res = res.data
       if (res.code === 200) {
         const data = res.data
@@ -45,6 +50,9 @@ export default {
   },
   mounted () {
     this.getDetailData()
+  },
+  activated () {
+    // 可以在这里处理keep-live生成的缓存，重新发起请求
   }
 }
 </script>

@@ -23,5 +23,9 @@ export default new Router({
       name: 'detail',
       component: Detail
     }
-  ]
+  ],
+  // 当切换到新路由时，想要页面滚到顶部，或者是保持原先的滚动位置
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
